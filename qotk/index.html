@@ -1,1 +1,99 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF=8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>QOTK | Martial Arcade</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="../favicon.png" />
+</head>
+<body>
+  <div id="arcade"></div>
+  <div id="msg" style="color:#fff; z-index:999999999"></div>
+  <div id="controlPadL">
+    <div id="leftBtn" class="controlPadBtn"></div>
+    <div id="rightBtn" class="controlPadBtn"></div>
+  </div>
+  <div id="controlPadR">
+    <div id="aBtn" class="controlPadBtn"></div>
+    <div id="bBtn" class="controlPadBtn"></div>
+    <div id="cBtn" class="controlPadBtn"></div>
+  </div>
+  <a id="ma-logo" href="https://linktr.ee/martialarcade" target="_blank"></a>
+  <canvas id="gameCanvas"></canvas>
+  <canvas id="menuCanvas"></canvas>
+  <input type="hidden" id="pause" value="1" />
+  
+  <img id="menuBg" class="hidden" src="assets/menuBg.png" />
+  <img id="menuFrame" class="hidden" src="assets/menuFrame.png" />
+  <img id="menuTitle" class="hidden" src="assets/title.png" />
+  <img id="menuMain" class="hidden" src="assets/menuMain.png" />
+  <img id="menuMainOutline" class="hidden" src="assets/menuMainOutline.png" />
+  <img id="about" class="hidden" src="assets/intro.png" />
+  <img id="howTo" class="hidden" src="assets/howto.png" />
+  
+  <img id="kumite" class="hidden" src="assets/kumite.png" />
+  <img id="dojo" class="hidden" src="assets/dojo.png" />
+  <img id="gym" class="hidden" src="assets/gym.png" />
+  <img id="dojang" class="hidden" src="assets/dojang.png" />
+  
+  <img id="select" class="hidden" src="assets/select.png" />
+  <img id="selectOutline" class="hidden" src="assets/selectOutline.png" />
+  
+  <img id="fighter0_0" class="hidden" src="assets/fighter0_0.png" />
+  <img id="fighter0_1" class="hidden" src="assets/fighter0_1.png" />
+  <img id="fighter1_0" class="hidden" src="assets/fighter1_0.png" />
+  <img id="fighter1_1" class="hidden" src="assets/fighter1_1.png" />
+  <img id="fighter2_0" class="hidden" src="assets/fighter2_0.png" />
+  <img id="fighter2_1" class="hidden" src="assets/fighter2_1.png" />
+  <!--<img id="fighter3_0" class="hidden" src="assets/fighter3_0.png" />
+  <img id="fighter3_1" class="hidden" src="assets/fighter3_1.png" />
+  <img id="fighter4_0" class="hidden" src="assets/fighter4_0.png" />
+  <img id="fighter4_1" class="hidden" src="assets/fighter4_1.png" />
+  <img id="fighter5_0" class="hidden" src="assets/fighter5_0.png" />
+  <img id="fighter5_1" class="hidden" src="assets/fighter5_1.png" />
+  <img id="fighter6_0" class="hidden" src="assets/fighter6_0.png" />
+  <img id="fighter6_1" class="hidden" src="assets/fighter6_1.png" />
+  <img id="fighter7_0" class="hidden" src="assets/fighter7_0.png" />
+  <img id="fighter7_1" class="hidden" src="assets/fighter7_1.png" />
+  <img id="fighter8_0" class="hidden" src="assets/fighter8_0.png" />
+  <img id="fighter8_1" class="hidden" src="assets/fighter8_1.png" />-->
+  
+  <img id="dojoFighter1" class="hidden" src="assets/trainingfighter0.png" />
+  <img id="dojoFighter2" class="hidden" src="assets/trainingfighter1.png" />
+  <img id="dojangFighter1" class="hidden" src="assets/trainingfighter2.png" />
+  <img id="dojangFighter2" class="hidden" src="assets/trainingfighter3.png" />
+  <img id="gymFighter1" class="hidden" src="assets/trainingfighter4.png" />
+  <img id="gymFighter2" class="hidden" src="assets/trainingfighter5.png" />
+  
+  <img id="heads" class="hidden" src="assets/heads.png" />
+  <img id="names" class="hidden" src="assets/names.png" />
+  
+  <img id="fightPanel" class="hidden" src="assets/fightPanel.png" />
+  <img id="health0" class="hidden" src="assets/health0.png" />
+  <img id="health1" class="hidden" src="assets/health1.png" />
+  <img id="timer" class="hidden" src="assets/timer.png" />
+  <img id="blood" class="hidden" src="assets/blood.png" />
+  <img id="youWin" class="hidden" src="assets/you-win.png" />
+  <img id="youLose" class="hidden" src="assets/you-lose.png" />
+  
+  <script>
+    window.addEventListener("error", errorLog);
+    let errorString = "";
+    const msgContainer = document.getElementById('msg');
+    function errorLog(event) {
+      let msg = source = lineno = colno = error = time = "";
+      event.preventDefault();
+      msg = event.message;
+      source = event.filename;
+      lineno = event.lineno;
+      colno = event.colno;
+      error = event.error;
+      errorString = `Source Info-: ${source}<br>Line No-: ${lineno} Column No-: ${colno}<br>Error Info-: ${error}`;
+      msgContainer.innerHTML = errorString;
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

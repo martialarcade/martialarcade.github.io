@@ -1,0 +1,130 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background: radial-gradient(#190B50, #000000);
+  overflow:hidden;
+  height:100vh;
+  width:100%;
+  position:relative;
+}
+
+#arcade {
+  background-repeat:no-repeat;
+  background-position: center;
+  background-image:url('assets/arcade-machine.png');
+  background-size:930px;
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+#ma-logo {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, 400px);
+  height:145px;
+  width:860px;
+  display:block;
+}
+
+#screenRotate {
+  position:fixed;
+  z-index:1;
+  top:1rem;
+  right:1rem;
+  width:5rem;
+  height:5rem;
+  display:block;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-image:url('assets/rotate-screen.svg');
+  background-size:contain;
+  opacity:0.5;
+  transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out;
+}
+
+#screenRotate {
+  transform: rotate(90deg);
+}
+
+#gameCanvas, #menuCanvas {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:640px;
+  height:448px;
+  max-width:100vw;
+  border-radius: 1rem;
+  overflow:hidden;
+}
+
+#controlPadL, #controlPadR {
+  position:fixed;
+  box-sizing:border-box;
+  width:13rem;
+  height:13rem;
+  background-color:rgba(255, 255, 255, 0.25);
+  top:50%;
+  border-radius: 999px;
+  z-index:1;
+  background-image:none;
+  transform: translate(0, 208px);
+}
+#controlPadL { left:2rem; }
+#controlPadR { right:2rem; }
+.controlPadBtn {position:absolute; width:5rem; height:5rem; top:50%; transform: translate(0, -50%);
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:contain;
+}
+#leftBtn {left:1rem;}
+#rightBtn {left:7rem;}
+#aBtn {right:7rem; margin-top:1.75rem;}
+#bBtn {right:1rem; margin-top:1.75rem;}
+#cBtn {right:4rem; margin-top:-3.5rem;}
+#leftBtn {background-image: url('assets/control-btns_leftBtn.svg');}
+#rightBtn {background-image: url('assets/control-btns_rightBtn.svg');}
+#aBtn {background-image: url('assets/control-btns_aBtn.svg');}
+#bBtn {background-image: url('assets/control-btns_bBtn.svg');}
+#cBtn {background-image: url('assets/control-btns_cBtn.svg');}
+
+@media screen and (max-height:820px) {
+  #arcade {background-size:78.5vw; width:100%;}
+  #gameCanvas, #menuCanvas {height:auto; width:55vw;}
+  #controlPadL, #controlPadR {transform: translate(0, 0);}
+  #controlPadL, #controlPadR {width:10rem; height:10rem;}
+  #controlPadL { left:0.5rem; }
+  #controlPadR { right:0.5rem; }
+  .controlPadBtn {width:4rem; height:4rem;}
+  #leftBtn {left:0.75rem;}
+  #rightBtn {left:5.25rem;}
+  #aBtn {right:5.25rem; margin-top:1.25rem;}
+  #bBtn {right:0.75rem; margin-top:1.25rem;}
+  #cBtn {right:3rem; margin-top:-2.75rem;}
+}
+
+@media screen and (max-width:740px) {
+  #arcade {background-size:125.68vw;}
+  #ma-logo {transform: translate(-50%, 54vw); width:100vw; height:20vw;}
+  #gameCanvas, #menuCanvas { width:86.49vw; height:auto;}
+  #controlPadL, #controlPadR {transform: translate(0, 27vw);}
+  #controlPadL, #controlPadR {width:10rem; height:10rem;}
+  #controlPadL { left:0.5rem; }
+  #controlPadR { right:0.5rem; }
+  .controlPadBtn {width:4rem; height:4rem;}
+  #leftBtn {left:0.75rem;}
+  #rightBtn {left:5.25rem;}
+  #aBtn {right:5.25rem; margin-top:1.25rem;}
+  #bBtn {right:0.75rem; margin-top:1.25rem;}
+  #cBtn {right:3rem; margin-top:-2.75rem;}
+}
+
+.hidden {
+  display:none;
+}
