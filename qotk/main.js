@@ -46,17 +46,6 @@ window.addEventListener('load', function() {
       this.audioHit2 = new Audio('./sfx/qotk-hit2.m4a');
       this.audioHit3 = new Audio('./sfx/qotk-hit3.m4a');
 
-      window.addEventListener('keydown', (e) => {
-    switch(e.key){
-      case "ArrowLeft":
-	this.audioPlay(this.audioOption);
-      break;
-      case "ArrowRight":
-	this.audioPlay(this.audioSelect);    
-      break;
-    }
-    });
-
     }
     update(deltaTime) {
       if (this.frameTimer > this.frameInterval) {
