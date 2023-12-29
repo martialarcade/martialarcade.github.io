@@ -37,14 +37,14 @@ window.addEventListener('load', function() {
       this.frameTimer = 0;
       this.frameInterval = 100;
       //audio
-      this.audioOption = new Audio('https://dl.dropbox.com/scl/fi/2fhdfd3msfw9dix97kue4/qotk-option.m4a?rlkey=qvxc7h0l7y8qhdk30bjrszz43');
-      this.audioSelect = new Audio('https://dl.dropbox.com/scl/fi/u274c9sz0qzjv2lpccjf9/qotk-select.m4a?rlkey=d0dxkeh8rf64iwpisrrsyky8f');
-      this.audioIntro = new Audio('https://dl.dropbox.com/scl/fi/mpxch5l0ppwfl1w34om0u/qotk-intro.m4a?rlkey=1fu8pl2z9dduc78pxq9adyog9');
-      this.audioStart = new Audio('https://dl.dropbox.com/scl/fi/igc57qffg82ae0hsaryly/qotk-start.m4a?rlkey=qlbweq7rfp0dm8v3o48ah7y1m');
-      this.audioFight = new Audio('https://dl.dropbox.com/scl/fi/iek4xog9c3hb4v4wegxtt/qotk-fight.m4a?rlkey=s5mxo3krhf2kwiat8jgqwyqox');
-      this.audioHit1 = new Audio('https://dl.dropbox.com/scl/fi/p9d8p7encg470h3na7vsp/qotk-hit1.m4a?rlkey=6j0e1ynlku4ld5rtr8n1m5udz');
-      this.audioHit2 = new Audio('https://dl.dropbox.com/scl/fi/k88ylcakt6ws7m035o7b9/qotk-hit2.m4a?rlkey=vtc0o23y4jut1o2w0x00b095t');
-      this.audioHit3 = new Audio('https://dl.dropbox.com/scl/fi/z816i0jsyjqo9rxmlgjc4/qotk-hit3.m4a?rlkey=fuidxgpsrwu4czdivp5gy9xfh');
+      this.audioOption = new Audio('sfx/qotk-option.m4a');
+      this.audioSelect = new Audio('sfx/qotk-select.m4a');
+      this.audioIntro = new Audio('sfx/qotk-intro.m4a');
+      this.audioStart = new Audio('sfx/qotk-start.m4a');
+      this.audioFight = new Audio('sfx/qotk-fight.m4a');
+      this.audioHit1 = new Audio('sfx/qotk-hit1.m4a');
+      this.audioHit2 = new Audio('sfx/qotk-hit2.m4a');
+      this.audioHit3 = new Audio('sfx/qotk-hit3.m4a');
     }
     update(deltaTime) {
       if (this.frameTimer > this.frameInterval) {
