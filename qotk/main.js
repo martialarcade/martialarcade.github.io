@@ -35,9 +35,9 @@ window.addEventListener('load', function() {
       this.bloods = [];
       this.enemyThrown = null;
       this.frameTimer = 0;
-		  this.frameInterval = 100;
-		  //audio
-		  this.audioOption = new Audio('https://dl.dropbox.com/scl/fi/2fhdfd3msfw9dix97kue4/qotk-option.m4a?rlkey=qvxc7h0l7y8qhdk30bjrszz43');
+      this.frameInterval = 100;
+      //audio
+      this.audioOption = new Audio('https://dl.dropbox.com/scl/fi/2fhdfd3msfw9dix97kue4/qotk-option.m4a?rlkey=qvxc7h0l7y8qhdk30bjrszz43');
       this.audioSelect = new Audio('https://dl.dropbox.com/scl/fi/u274c9sz0qzjv2lpccjf9/qotk-select.m4a?rlkey=d0dxkeh8rf64iwpisrrsyky8f');
       this.audioIntro = new Audio('https://dl.dropbox.com/scl/fi/mpxch5l0ppwfl1w34om0u/qotk-intro.m4a?rlkey=1fu8pl2z9dduc78pxq9adyog9');
       this.audioStart = new Audio('https://dl.dropbox.com/scl/fi/igc57qffg82ae0hsaryly/qotk-start.m4a?rlkey=qlbweq7rfp0dm8v3o48ah7y1m');
