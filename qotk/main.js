@@ -37,14 +37,14 @@ window.addEventListener('load', function() {
       this.frameTimer = 0;
       this.frameInterval = 100;
       //audio
-      this.audioOption = document.getElementById("audioOption");
-      this.audioSelect = document.getElementById("audioSelect");
-      this.audioIntro = document.getElementById("audioIntro");
-      this.audioStart = document.getElementById("audioStart");
-      this.audioFight = document.getElementById("audioFight");
-      this.audioHit1 = document.getElementById("audioHit1");
-      this.audioHit2 = document.getElementById("audioHit2");
-      this.audioHit3 = document.getElementById("audioHit3");
+      this.audioOption = new Audio('sfx/qotk-option.m4a');
+      this.audioSelect = new Audio('sfx/qotk-select.m4a');
+      this.audioIntro = new Audio('sfx/qotk-intro.m4a');
+      this.audioStart = new Audio('sfx/qotk-start.m4a');
+      this.audioFight = new Audio('sfx/qotk-fight.m4a');
+      this.audioHit1 = new Audio('sfx/qotk-hit1.m4a');
+      this.audioHit2 = new Audio('sfx/qotk-hit2.m4a');
+      this.audioHit3 = new Audio('sfx/qotk-hit3.m4a');
     }
     update(deltaTime) {
       if (this.frameTimer > this.frameInterval) {
