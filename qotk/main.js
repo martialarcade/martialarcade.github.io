@@ -54,6 +54,7 @@ window.addEventListener('load', function() {
       case "ArrowRight":
 	this.audioPlay(this.audioSelect);    
       break;
+    }
     });
 
     }
