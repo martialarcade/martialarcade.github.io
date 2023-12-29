@@ -49,10 +49,10 @@ window.addEventListener('load', function() {
       window.addEventListener('keydown', (e) => {
     switch(e.key){
       case "ArrowLeft":
-	audioOption.play();
+	this.audioPlay(this.audioOption);
       break;
       case "ArrowRight":
-	audioSelect.play();	    
+	this.audioPlay(this.audioSelect);    
       break;
     });
 
