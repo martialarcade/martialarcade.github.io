@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
       //audio
       this.audioOption = new Audio('./sfx/qotk-option.m4a');
       this.audioSelect = new Audio('./sfx/qotk-select.m4a');
-      this.audioIntro = new Audio('./sfx/qotk-intro.wav');
+      this.audioIntro = new Audio('./sfx/qotk-intro.m4a');
       this.audioStart = new Audio('./sfx/qotk-start.m4a');
       this.audioFight = new Audio('./sfx/qotk-fight.m4a');
       this.audioHit1 = new Audio('./sfx/qotk-hit1.m4a');
